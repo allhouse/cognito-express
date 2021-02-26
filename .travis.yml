@@ -1,0 +1,16 @@
+language: "node_js"
+node_js:
+  - "13"
+  - "12"
+
+before_install:
+  - "npm install"
+
+script: 
+  - npm test
+
+
+
+sudo: false
+
+after_success: 'npm run coveralls'
